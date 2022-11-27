@@ -9,6 +9,7 @@
 - [loop](#loop)
 - [Modules](#modules)
   - [import variables](#import-variables)
+- [npm](#npm)
 
 
 
@@ -89,4 +90,40 @@
     // module to import variables: B.js
     const <variable2> = require("./A");
     <variable2>.<variable_in_A.js>.forEach(m => console.log(m))
+```
+
+
+# npm
+* a package manager for Node.js to manage the external packages
+
+```bash
+    # list of npm commands
+    npm -l
+
+    # init a Node.js application and creates a package.json
+    npm init 
+
+    # install packages
+    ## --save: install the package as a dependency for your application
+    ### --save-prod: explicitly install packages for production
+    ### --save-dev: the package is only for development purposes
+    ## --global: install the package globally on your computer 
+    npm install <package>
+
+    # reverse the install action
+    npm uninstall <package>
+
+    # save and upload your package to the npm package community
+    npm publish
+
+    # run your Node.js application
+    npm start
+
+    # quit the running application
+    npm stop
+
+    # open the likely documentation page (web page) for your specified package 
+    npm docs <package>
+
+
 ```
