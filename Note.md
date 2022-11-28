@@ -9,7 +9,9 @@
 - [loop](#loop)
 - [Modules](#modules)
   - [import variables](#import-variables)
+  - [const vs let vs var](#const-vs-let-vs-var)
 - [npm](#npm)
+- [Generate a package](#generate-a-package)
 
 
 
@@ -91,6 +93,12 @@
     const <variable2> = require("./A");
     <variable2>.<variable_in_A.js>.forEach(m => console.log(m))
 ```
+## const vs let vs var
+|Command|Meaning|
+|:---:|:---|
+|const|can not be updated and re-declared => will not covered by global or local variables|
+|let|can be updated, but can not be re-declared|
+|var|can be updated and re-declared|
 
 
 # npm
@@ -125,5 +133,17 @@
     # open the likely documentation page (web page) for your specified package 
     npm docs <package>
 
+
+```
+
+# Generate a package
+* `package-lock.json`
+  * keep track of your package installations and manage the state and history of your project's dependencies
+```bash
+    # navigate to your folder in the terminal
+    npm init
+
+    # install packages
+    npm install <package> --save
 
 ```
