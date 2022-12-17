@@ -2,6 +2,7 @@
 # Contents
 - [Enter Node.js REPL](#enter-nodejs-repl)
   - [REPL Commands](#repl-commands)
+  - [see HTTP status code](#see-http-status-code)
 - [Run a .js file](#run-a-js-file)
   - [import .js to REPL](#import-js-to-repl)
 - [Create a variable](#create-a-variable)
@@ -12,10 +13,12 @@
   - [const vs let vs var](#const-vs-let-vs-var)
 - [npm](#npm)
 - [Generate a package](#generate-a-package)
+- [Port](#port)
 
 
 
 # Enter Node.js REPL
+* REPL: programming language environment, like consol
 ```bash
     node
 ```
@@ -41,6 +44,12 @@
     .save <filename.js>
 
 ```
+## see HTTP status code
+```bash
+    http.STATUS_CODES
+
+```
+
 
 # Run a .js file
 ```bash
@@ -145,5 +154,13 @@
 
     # install packages
     npm install <package> --save
+    npm i <package> -S
 
 ```
+
+# Port
+|Port|Meaning|
+|:---:|:---|
+|3000|generally used for web servers in development|
+|80|HTTP|
+|443|HTTPS|
