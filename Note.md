@@ -14,6 +14,10 @@
 - [npm](#npm)
 - [Generate a package](#generate-a-package)
 - [Port](#port)
+- [Code](#code)
+  - [callback function](#callback-function)
+  - [call website by shell](#call-website-by-shell)
+  - [methods](#methods)
 
 
 
@@ -164,3 +168,21 @@
 |3000|generally used for web servers in development|
 |80|HTTP|
 |443|HTTPS|
+
+
+# Code
+## callback function
+* request always comes before responses
+
+```javascript
+    (req, res) => {}
+```
+
+## call website by shell
+```bash
+    curl --data 'hello, how are you?' http://localhost:<port>
+
+```
+
+## methods
+* Buffer: stream data in binary format
