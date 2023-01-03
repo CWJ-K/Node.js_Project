@@ -1,3 +1,25 @@
-const port = 3000;
-const http = require('http');
-const httpStatus = require
+const httpStatus = require('http-status-codes');
+const contentTypes = require('./contentTypes');
+const utils = require('./utils');
+
+const routes = {
+    'GET': {},
+    'POST': {}
+};
+
+exports.handle = (req, res) => {
+    try {
+        routes[req.method][req.url](req, res);
+    } catch (e) {
+        res.writeHead(httpStatus.OK, contentTypes.html);
+        utils.getFile('views/error.html', res)
+    }
+};
+
+exports.get = (url, action) => {
+    routes['GET'][url] = action;
+};
+
+exports.post = (url, action) => {
+    routes['POST'][url] = action;
+};
