@@ -12,6 +12,7 @@
   - [import variables](#import-variables)
   - [const vs let vs var](#const-vs-let-vs-var)
 - [npm](#npm)
+  - [install express](#install-express)
 - [Generate a package](#generate-a-package)
 - [Port](#port)
 - [Code](#code)
@@ -125,11 +126,11 @@
     npm init 
 
     # install packages
-    ## --save: install the package as a dependency for your application
+    ## --save: install the package as a dependency for your application or your applications only can be run locally
     ### --save-prod: explicitly install packages for production
     ### --save-dev: the package is only for development purposes
     ## --global: install the package globally on your computer 
-    npm install <package>
+    npm install <package> --save
 
     # reverse the install action
     npm uninstall <package>
@@ -148,6 +149,18 @@
 
 
 ```
+
+## install express
+* specify the version
+```bash
+    npm install express@4.16.3 --save    
+```
+* access the Express.js package documentation
+```bash
+    npm docs express
+
+```
+
 
 # Generate a package
 * `package-lock.json`
