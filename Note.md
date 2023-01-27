@@ -19,6 +19,15 @@
   - [callback function](#callback-function)
   - [call website by shell](#call-website-by-shell)
   - [methods](#methods)
+- [Request Objects](#request-objects)
+- [Express](#express)
+  - [Route Parameters](#route-parameters)
+  - [app.use('/parameters', )](#appuseparameters-)
+    - [next](#next)
+- [Analyze Request Data](#analyze-request-data)
+  - [Two methods to get request data from users](#two-methods-to-get-request-data-from-users)
+- [MVC](#mvc)
+  - [Structure](#structure)
 
 
 
@@ -199,3 +208,60 @@
 
 ## methods
 * Buffer: stream data in binary format
+
+
+# Request Objects
+|Data Object|Description|Note|
+|:---|:---:|:---:|
+|params|IDs and tokens from the URL||
+|body|contents of the request||
+|url|url being visited||
+|query|data submitted to the application server|representation: localhost:3000?name=jon|
+
+
+# Express
+* No need to write router funtions by yourself
+
+## Route Parameters
+* `:dynamic_parameters`
+```python
+    app.get('/items/:vegetable', (req, res) => {
+        res.send(req.params.vegetable)
+    });
+```
+
+## app.use('/parameters', <callback>)
+* Express.js middleware functions, like logs
+* without this one, Express will not execute next functions
+### next 
+* use `next` to let Express.js know that your function is complete and that you want to continue to whatever function is next in the chain
+
+# Analyze Request Data
+## Two methods to get request data from users
+1. POST request: request body
+```bash
+    # use app.post()
+    ## post data to the url by git bash
+    curl --data 'fisrt_name=he&last_name=we'  http://localhost:3000
+
+```
+
+2. URL: request's query string
+```python
+    #localhost:3000?cart=3&pagesVisted=4
+    console.log(req.query)
+```
+
+# MVC
+|Part|Description|
+|:---:|:---:|
+|Views|rendered displays of data|
+|Models|Define data to be contained and types of functions|
+|Controllers|glue between views and models; perform most of the logic, like route callback functions|
+
+## Structure
+* Express.js
+  * handle requests
+  * feed controllers
+
+Client --request--> Server [(Event Loop & request handler) -> Router -> Controllers -> Templating engine or (Models -> Database)-> Views -> Request Handler] -> Client
