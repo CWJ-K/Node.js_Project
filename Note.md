@@ -30,6 +30,8 @@
   - [Structure](#structure)
   - [layouts](#layouts)
   - [Partials](#partials)
+- [Error handling](#error-handling)
+  - [npm start](#npm-start)
 
 
 
@@ -278,3 +280,9 @@ Client --request--> Server [(Event Loop & request handler) -> Router -> Controll
 ## Partials
 * use `include`
 * like snippets can be used in other views. not hardcode in `layour.ejs`
+
+
+# Error handling
+## npm start
+* add `node main.js` in package.json
+* it allows users to use `npm start` to start applications
