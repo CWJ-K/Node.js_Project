@@ -28,6 +28,8 @@
   - [Two methods to get request data from users](#two-methods-to-get-request-data-from-users)
 - [MVC](#mvc)
   - [Structure](#structure)
+  - [layouts](#layouts)
+  - [Partials](#partials)
 
 
 
@@ -256,7 +258,7 @@
 |Part|Description|
 |:---:|:---:|
 |Views|rendered displays of data|
-|Models|Define data to be contained and types of functions|
+|Models|Define orders of data to be contained and types of functions|
 |Controllers|glue between views and models; perform most of the logic, like route callback functions|
 
 ## Structure
@@ -265,3 +267,14 @@
   * feed controllers
 
 Client --request--> Server [(Event Loop & request handler) -> Router -> Controllers -> Templating engine or (Models -> Database)-> Views -> Request Handler] -> Client
+
+## layouts
+* the content does not change from page to page, e.g. the bottom/footer of the page or navigation bar
+* no re-create but share to other views
+* `layout.ejs`
+  * `install express-ejs-layouts`
+  * render **all .ejs files**
+
+## Partials
+* use `include`
+* like snippets can be used in other views. not hardcode in `layour.ejs`
