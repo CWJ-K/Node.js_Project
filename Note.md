@@ -32,6 +32,7 @@
   - [Partials](#partials)
 - [Error handling](#error-handling)
   - [npm start](#npm-start)
+- [Serve static files](#serve-static-files)
 
 
 
@@ -286,3 +287,9 @@ Client --request--> Server [(Event Loop & request handler) -> Router -> Controll
 ## npm start
 * add `node main.js` in package.json
 * it allows users to use `npm start` to start applications
+
+
+# Serve static files
+* include assets and custom error pages
+* the html pages does not go through a templating engine because they do not have ejs extentions
+* Can direct use the static files by telling Express.js to use cooresponding public files. `app.use(express.static('public'));` at the same level in the project directory as main.js

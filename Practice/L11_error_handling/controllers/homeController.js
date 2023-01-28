@@ -1,6 +1,7 @@
 'use strict';
 
 exports.respondWithName = (req, res) => {
+    //throw Error('error in code');
     res.render('index')  // extension is not required
 };
 
