@@ -2,7 +2,8 @@
 
 exports.respondWithName = (req, res) => {
     //throw Error('error in code');
-    res.render('index')  // extension is not required
+    let paramsName = req.params.myName;
+    res.render('index', { name: paramsName});  // extension is not required
 };
 
 exports.sendWithName = (req, res) => {
