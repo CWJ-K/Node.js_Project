@@ -72,3 +72,16 @@
 ```
 
 
+# Mongosh
+```javescript
+  # save object to database. need to create an object first
+  var.save()
+
+  # create and save obejct to database
+  var.create()
+
+  # execute query
+  statement.exec()
+
+
+```
