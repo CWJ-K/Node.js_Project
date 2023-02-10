@@ -33,6 +33,8 @@
 - [Error handling](#error-handling)
   - [npm start](#npm-start)
 - [Serve static files](#serve-static-files)
+- [install mongoDB](#install-mongodb)
+  - [Mongoose](#mongoose)
 
 
 
@@ -293,3 +295,15 @@ Client --request--> Server [(Event Loop & request handler) -> Router -> Controll
 * include assets and custom error pages
 * the html pages does not go through a templating engine because they do not have ejs extentions
 * Can direct use the static files by telling Express.js to use cooresponding public files. `app.use(express.static('public'));` at the same level in the project directory as main.js
+
+
+# install mongoDB
+```bash
+  npm i mongodb -S 
+
+```
+## Mongoose
+* a library used to create model schema
+* an object-document mapper (ODM)
+  * preserve the object-oriented structure of the application
+  * build models with schemas degining what type of data can be saved
