@@ -35,6 +35,7 @@
 - [Serve static files](#serve-static-files)
 - [install mongoDB](#install-mongodb)
   - [Mongoose](#mongoose)
+- [Promise](#promise)
 
 
 
@@ -307,3 +308,15 @@ Client --request--> Server [(Event Loop & request handler) -> Router -> Controll
 * an object-document mapper (ODM)
   * preserve the object-oriented structure of the application
   * build models with schemas degining what type of data can be saved
+
+
+# Promise
+* to avoid the [drawback](https://ithelp.ithome.com.tw/articles/10197427) of traditional callback
+* to ensure promise, if promise is broken. error will be catched
+  * to wrap callbacks and handle returned data or errors in a more elegant way
+* MongoDB 
+  * let Mongoose knows to use promise
+    ```
+    mongoose.Promise = global.Promise
+    ```
+  * `exec`: with an authentic promise in MongoDB
